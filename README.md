@@ -1,7 +1,6 @@
 # Predicción de Montos Promedio de Préstamos
 
 ## 🎯 Objetivo del Trabajo
-
 Este proyecto tiene como propósito construir modelos de regresión (lineal y red neuronal) para predecir el monto promedio de préstamos de clientes, basándonos en información como edad, frecuencia de transacciones y otros datos relevantes.
 
 ---
