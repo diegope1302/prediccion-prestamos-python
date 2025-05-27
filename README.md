@@ -1,30 +1,34 @@
-# Predicción de Préstamos con Regresión Lineal y Red Neuronal
+# 📊 Predicción de Montos de Préstamos con Regresión Lineal y Red Neuronal
 
-Este proyecto analiza datos de clientes para predecir montos de préstamos utilizando dos enfoques:
+## 🎯 Objetivo del Trabajo
 
-- **Regresión Lineal**
-- **Red Neuronal (Keras)**
-
-Se aplican técnicas de limpieza, análisis, visualización, normalización y entrenamiento de modelos con Python y bibliotecas como `pandas`, `scikit-learn`, `matplotlib` y `tensorflow`.
+Desarrollar un modelo de predicción de montos de préstamos utilizando técnicas de aprendizaje automático, aplicando regresión lineal y redes neuronales en Python. Además, practicar la limpieza, análisis, visualización y entrenamiento de datos reales con lógica de programación y buenas prácticas de documentación.
 
 ---
 
-## 📁 Archivos incluidos
+## 📄 Descripción del Dataset
 
-| Archivo | Descripción |
-|--------|-------------|
-| `regresion_red_neuronal.py` | Código completo que incluye regresión lineal y red neuronal |
-| `dataBasePrestDigital.csv` | Base de datos de clientes y préstamos (usa `;` como separador) |
-| `regresion_lineal.png` | Gráfica de regresión lineal: valores reales vs predichos |
-| `red_neuronal.png` | Gráficas de entrenamiento y predicción de la red neuronal |
-| `README.md` | Este archivo |
-| `.gitignore` | Ignora archivos innecesarios como `__pycache__` |
+El dataset `dataBasePrestDigital.csv` contiene información transaccional y demográfica de clientes, incluyendo:
+
+- `cliente`: ID único del cliente
+- `tipoTx`: tipo de transacción
+- `promSaldoPrest3Um`: promedio del saldo del préstamo en los últimos 3 meses
+- `rngEdad`: rango de edad (por ejemplo, `<35-45]`)
+- `fecha`: fecha de la transacción
+
+> El archivo utiliza el punto y coma (`;`) como separador de columnas.
 
 ---
 
-## 🧠 Librerías necesarias
+## 🧰 Librerías Utilizadas
 
-Instálalas con:
+- `pandas`: manipulación y limpieza de datos
+- `numpy`: operaciones numéricas
+- `matplotlib`: visualización de datos
+- `scikit-learn`: escalado, regresión lineal, métricas
+- `tensorflow.keras`: construcción y entrenamiento de la red neuronal
+
+Instalación:
 
 ```bash
 pip install pandas matplotlib scikit-learn tensorflow
