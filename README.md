@@ -1,34 +1,66 @@
-# 📊 Predicción de Montos de Préstamos con Regresión Lineal y Red Neuronal
+# Predicción de Préstamos con Modelos de Machine Learning
 
-## 🎯 Objetivo del Trabajo
+## 🎯 Objetivo
 
-Desarrollar un modelo de predicción de montos de préstamos utilizando técnicas de aprendizaje automático, aplicando regresión lineal y redes neuronales en Python. Además, practicar la limpieza, análisis, visualización y entrenamiento de datos reales con lógica de programación y buenas prácticas de documentación.
-
----
-
-## 📄 Descripción del Dataset
-
-El dataset `dataBasePrestDigital.csv` contiene información transaccional y demográfica de clientes, incluyendo:
-
-- `cliente`: ID único del cliente
-- `tipoTx`: tipo de transacción
-- `promSaldoPrest3Um`: promedio del saldo del préstamo en los últimos 3 meses
-- `rngEdad`: rango de edad (por ejemplo, `<35-45]`)
-- `fecha`: fecha de la transacción
-
-> El archivo utiliza el punto y coma (`;`) como separador de columnas.
+Desarrollar modelos predictivos (regresión lineal y red neuronal) para estimar el monto promedio de préstamos utilizando datos históricos de transacciones.
 
 ---
 
-## 🧰 Librerías Utilizadas
+## 📊 Descripción del Dataset
 
-- `pandas`: manipulación y limpieza de datos
-- `numpy`: operaciones numéricas
-- `matplotlib`: visualización de datos
-- `scikit-learn`: escalado, regresión lineal, métricas
-- `tensorflow.keras`: construcción y entrenamiento de la red neuronal
+El dataset `dataBasePrestDigital.csv` contiene información de clientes, como:
+- Edad (`rngEdad`)
+- Monto promedio de préstamos en los últimos 3 meses (`promSaldoPrest3Um`)
+- Cliente (`cliente`)
+- Tipo de transacción
+- Ubicación, entre otros.
 
-Instalación:
+---
 
-```bash
-pip install pandas matplotlib scikit-learn tensorflow
+## 📚 Librerías utilizadas
+
+- `pandas`
+- `numpy`
+- `matplotlib`
+- `seaborn`
+- `sklearn`
+- `tensorflow` (Keras)
+
+---
+
+## 🤖 Modelos utilizados
+
+### 1. Regresión Lineal
+
+- Se utilizaron variables como `frecuencia_transacciones` y `promSaldoPrest3Um`.
+- Se graficó la línea de mejor ajuste y se evaluó el error cuadrático medio.
+
+![Gráfica regresión lineal](Figure_regresion.png)
+
+---
+
+### 2. Red Neuronal
+
+- Arquitectura con dos capas ocultas (`relu`) y una capa de salida.
+- Entrenada durante 50 épocas.
+- Se evaluó con métricas `mse` y `mae`.
+
+![Gráfica red neuronal](Figure_red_neuronal.png)
+
+---
+
+## 🧠 Lógica de programación usada
+
+Se aplicaron estructuras como:
+
+- `for` para analizar múltiples resultados
+- `if` para condiciones en los datos
+- Listas y diccionarios para organizar salidas gráficas y métricas.
+
+---
+
+## 📝 Conclusiones personales
+
+- La regresión lineal ofrece resultados rápidos, pero limitados.
+- La red neuronal mejora la predicción con mayor complejidad.
+- Es clave filtrar y limpiar bien los datos para obtener modelos más fiables.
