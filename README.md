@@ -1,66 +1,91 @@
-# Predicción de Préstamos con Modelos de Machine Learning
+# Predicción de Montos Promedio de Préstamos
 
-## 🎯 Objetivo
+## 🎯 Objetivo del Trabajo
 
-Desarrollar modelos predictivos (regresión lineal y red neuronal) para estimar el monto promedio de préstamos utilizando datos históricos de transacciones.
+Este proyecto tiene como propósito construir modelos de regresión (lineal y red neuronal) para predecir el monto promedio de préstamos de clientes, basándonos en información como edad, frecuencia de transacciones y otros datos relevantes.
 
 ---
 
 ## 📊 Descripción del Dataset
 
-El dataset `dataBasePrestDigital.csv` contiene información de clientes, como:
-- Edad (`rngEdad`)
-- Monto promedio de préstamos en los últimos 3 meses (`promSaldoPrest3Um`)
-- Cliente (`cliente`)
-- Tipo de transacción
-- Ubicación, entre otros.
+El conjunto de datos se encuentra en el archivo `dataBasePrestDigital.csv` y contiene información sobre:
+
+- Clientes identificados por un ID único
+- Rango de edad (`rngEdad`)
+- Promedio de saldo de préstamo en los últimos 3 meses (`promSaldoPrest3Um`)
+- Frecuencia de transacciones por cliente (calculada)
+
+Solo se consideran los registros donde el monto promedio de préstamo sea mayor a 0 para asegurar la calidad de los datos.
 
 ---
 
-## 📚 Librerías utilizadas
+## 🧰 Librerías Utilizadas
 
 - `pandas`
-- `numpy`
 - `matplotlib`
-- `seaborn`
-- `sklearn`
-- `tensorflow` (Keras)
+- `scikit-learn`
+- `tensorflow` / `keras`
 
 ---
 
-## 🤖 Modelos utilizados
+## 🧠 Modelos Utilizados
 
-### 1. Regresión Lineal
+### 🔷 Regresión Lineal
 
-- Se utilizaron variables como `frecuencia_transacciones` y `promSaldoPrest3Um`.
-- Se graficó la línea de mejor ajuste y se evaluó el error cuadrático medio.
+Se utilizó `LinearRegression` de scikit-learn. El modelo fue entrenado con:
 
-![Gráfica regresión lineal](Figure_regresion.png)
+- Frecuencia de transacciones
+- Edad
+- Monto promedio préstamo
 
----
+Se graficaron los valores reales vs. los valores predichos para visualizar el rendimiento.
 
-### 2. Red Neuronal
+### 🔶 Red Neuronal
 
-- Arquitectura con dos capas ocultas (`relu`) y una capa de salida.
-- Entrenada durante 50 épocas.
-- Se evaluó con métricas `mse` y `mae`.
+Se construyó una red neuronal secuencial con Keras:
 
-![Gráfica red neuronal](Figure_red_neuronal.png)
+- Capa densa de 64 neuronas (ReLU)
+- Capa densa de 32 neuronas (ReLU)
+- Capa de salida con 1 neurona (regresión)
 
----
-
-## 🧠 Lógica de programación usada
-
-Se aplicaron estructuras como:
-
-- `for` para analizar múltiples resultados
-- `if` para condiciones en los datos
-- Listas y diccionarios para organizar salidas gráficas y métricas.
+Se entrenó con los mismos datos que la regresión lineal y se graficó la evolución del error (loss), así como la comparación de predicciones vs. valores reales.
 
 ---
 
-## 📝 Conclusiones personales
+## 🧪 Lógica de Programación
 
-- La regresión lineal ofrece resultados rápidos, pero limitados.
-- La red neuronal mejora la predicción con mayor complejidad.
-- Es clave filtrar y limpiar bien los datos para obtener modelos más fiables.
+Se utilizó:
+
+- ✅ Un bucle `for` para recorrer predicciones y crear estructuras dinámicas.
+- ✅ Una condición `if` para evaluar predicciones por rangos.
+- ✅ Una `lista` para almacenar etiquetas de precisión.
+- ✅ Un `diccionario` para agrupar clientes por tramos de edad.
+
+Esto permitió hacer análisis personalizados y mostrar resultados más completos.
+
+---
+
+## 📷 Gráficas
+
+### Regresión Lineal
+![Regresión Lineal](Figure_regresion.png)
+
+### Red Neuronal
+![Red Neuronal](Figure_red_neuronal.png)
+
+---
+
+## 📌 Conclusiones Personales
+
+- La red neuronal mostró un mejor ajuste en los datos con menor error medio absoluto.
+- La regresión lineal es útil para tener un modelo interpretable y rápido de ejecutar.
+- La estandarización de variables fue clave para mejorar el rendimiento.
+- La integración de visualizaciones permite interpretar los resultados con mayor claridad.
+- Este proyecto me permitió reforzar conceptos de análisis de datos, regresión, redes neuronales y flujo de trabajo en GitHub.
+
+---
+
+## 🔗 Enlace al repositorio
+
+👉 [https://github.com/tu_usuario/tu_repositorio](https://github.com/tu_usuario/tu_repositorio)
+
