@@ -28,16 +28,3 @@ Instálalas con:
 
 ```bash
 pip install pandas matplotlib scikit-learn tensorflow
-
-
----
-
-### ✅ ¿Cómo usarlo?
-
-1. Copia ese texto y guárdalo como `README.md` en tu carpeta del proyecto.
-2. Luego súbelo a GitHub con:
-
-```bash
-git add README.md
-git commit -m "Agrega README con instrucciones y descripción"
-git push
